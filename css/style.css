@@ -9,31 +9,3 @@ a.sitetitle:visited {text-decoration: none; color: #2F5597}
 hr {border: 0.1px solid #2F5597}
 
 .footerText{color: #898989; font-size: 18px}
-
-
-
-
-
-
-.sectionTitle {color: #FFFFFF; font-size: 16px; font-family: Verdana}
-
-.sectionContent {color: #bbbbbb; font-size: 14px}
-
-.workDesc  {color: #bbbbbb; font-size: 12px}
-
-/*a:link {text-decoration: none; color: white}
-a:visited {text-decoration: none; color: white}
-a:hover {text-decoration: none; color: #CB6532}*/
-
-a.nonResponsive:link {text-decoration: none; color: #bbbbbb}
-/*a.nonResponsive:visited {text-decoration: none; color: #bbbbbb}*/
-a.nonResponsive:hover {text-decoration: none; color: #bbbbbb}
-
-
-table.adsListingCells:hover  {
-	border: 1px solid #CB6532;
-	cursor: pointer;
-	color: #CB6532;
-}
-
-
