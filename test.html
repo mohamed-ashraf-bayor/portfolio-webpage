@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+</head>
+
+<body>
+<h1>Performing AJAX Call</h1>
+<div id="result"></div>
+
+<script>
+    // Function to make AJAX call
+    function makeRequest() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    document.getElementById("result").innerText = xhr.responseText;
+                } else {
+                    document.getElementById("result").innerText = "Error: " + xhr.status;
+                }
+            }
+        };
+        xhr.open("GET", "https://japo.dev/api/stats?name=ANNO_MULTIPLE_ARTIFACTS", true);
+        xhr.send();
+    }
+
+    // Call the function when the page loads
+    window.onload = makeRequest;
+</script>
+</body>
+
+</html>
