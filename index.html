@@ -25,8 +25,13 @@
                 }
             }
         };
-        xhr.open("GET", "https://japo.dev/api/stats?name=ANNO_MULTIPLE_ARTIFACTS", true);
-        xhr.send();
+<!--        xhr.open("GET", "https://japo.dev/api/stats?name=ANNO_MULTIPLE_ARTIFACTS", true);-->
+<!--        xhr.send();-->
+
+xhr.open("POST", "https://japo.dev/api/subscription", true);
+xhr.setRequestHeader("Content-Type", "application/json");
+var requestBody = JSON.stringify({ "emailId": "ashraf.bayor@gmail.com" });
+xhr.send(requestBody);
     }
 
     // Call the function when the page loads
