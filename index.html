@@ -89,7 +89,21 @@
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
     .nav { display:flex; align-items:center; justify-content:space-between; padding: .9rem 0; }
-    .brand { font-weight: 1200; letter-spacing: .22rem; }
+.brand {
+  font-weight: 800;                 /* 1200 isn’t valid; 800 is bold */
+  font-size: clamp(1.25rem, 2.8vw, 2.25rem);
+  letter-spacing: .24rem;
+  text-transform: uppercase;
+
+  /* subtle gradient text for visibility on the dark header */
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* gentle glow to lift it off the background */
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
     .brand .dot { color: var(--brand-2); }
     nav ul { list-style: none; display:flex; gap: 1.2rem; margin:0; padding:0; }
     nav a { opacity:.9; font-weight:600; }
