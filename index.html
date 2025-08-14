@@ -1,161 +1,383 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basics -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Bayor — Java Developer & Software Architect</title>
+  <meta name="description" content="Portfolio of Mohamed Ashraf Bayor — Java developer & software architect. Featured projects: JAPO (Java Annotations Repo), FROPOREC, and JISEL. Talks, certifications, and contact links." />
+  <meta name="author" content="Mohamed Ashraf Bayor" />
+  <link rel="canonical" href="https://mohamedbayor.dev/" />
+  <link rel="icon" href="img/linkdIn-prfl-pic.jpg" />
+  <meta name="theme-color" content="#0b1020" />
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <!-- Social (OG/Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohamed Bayor — Java Developer & Software Architect" />
+  <meta property="og:description" content="Featured projects: JAPO, FROPOREC, JISEL. Talks, certifications, and contact links." />
+  <meta property="og:url" content="https://mohamedbayor.dev/" />
+  <meta property="og:image" content="https://mohamedbayor.dev/img/portfolio-pg-scrnsht.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<meta name="keywords" content="mohamed,ashraf,bayor,java,developer,software,engineer,architect,froporec,jisel,open,source,library,java17,java21,lts,certification,certified,programmer,japo,annotations,annotation,search,engine,repo,repository,aws,opensearch" />
-		<meta name="description" content="Portfolio website | Current &amp; Upcoming software projects" />
-		<meta name="author" content="Mohamed Ashraf Bayor" />
-		<meta property="og:image" content="https://mohamedbayor.dev/img/portfolio-pg-scrnsht.png" />
-		<title>Mohamed Bayor | Java Developer & Software Architect | Portfolio Website</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="shortcut icon" href="img/linkdIn-prfl-pic.jpg" />
-	</head>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-	<body>
+  <!-- Styles -->
+  <style>
+    :root {
+      --bg: #0b1020;           /* dark indigo */
+      --bg-soft: #0f162e;
+      --card: #111a34;
+      --text: #e6e8ee;
+      --muted: #a7b0c0;
+      --brand: #8b5cf6;        /* violet-500 */
+      --brand-2: #22d3ee;      /* cyan-400 */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f7fb;
+        --bg-soft: #ffffff;
+        --card: #ffffff;
+        --text: #0d1222;
+        --muted: #5c6577;
+        --shadow: 0 12px 32px rgba(10, 14, 30, .08);
+      }
+    }
+    /* Optional manual theme override */
+    html[data-theme="light"] { --bg:#f7f7fb; --bg-soft:#fff; --card:#fff; --text:#0d1222; --muted:#5c6577; --shadow:0 12px 32px rgba(10,14,30,.08);} 
+    html[data-theme="dark"] { --bg:#0b1020; --bg-soft:#0f162e; --card:#111a34; --text:#e6e8ee; --muted:#a7b0c0; --shadow:0 10px 30px rgba(0,0,0,.35);} 
 
-		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-		
-			<tr align="center">
-				<td height="1px">
-					<br/>
-					<a href="./index.html" class="sitetitle" target="_self">M O H A M E D&nbsp;&nbsp;&nbsp;B A Y O R</a>
-				</td>
-			</tr>
-			
-			<tr align="center">
-				<td height="1px">
-					<span class="jobTitle">Java Developer &amp; Software Architect</span>
-				</td>
-			</tr>
-			
-			<tr align="center">
-				<td height="1px">
-					<hr/>
-				</td>
-			</tr>
-			
-			<tr align="center">
-				<td height="1px">
-					<br/><br/><br/>
-					FEATURED WORK:
-					<br/><br/>
-				</td>
-			</tr>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,.12), transparent 60%),
+                               radial-gradient(1000px 600px at -10% 20%, rgba(139,92,246,.12), transparent 60%),
+                               var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
 
-			<tr align="center">
-				<td height="1px">
-					<table>
-						<tr>
-							<td>
-								<a class="sitetitle" href="https://japo.dev" target="_blank" title="JAPO: Java Annotations Repo" alt="JAPO: Java Annotations Repo">
-									<img src="img/japo.png" width="350" height="205"/>
-								</a>
-							</td>
-							<td>
-								<a class="sitetitle" href="https://froporec.org" target="_blank" title="FROPOREC: From POJOs to Records" alt="FROPOREC: From POJOs to Records">
-									<img src="img/froporec.png" width="350" height="205"/>
-								</a>
-							</td>
-							<td>
-								<a class="sitetitle" href="https://jisel.org" target="_blank" title="JISEL: Java Interface Segregation Library" alt="JISEL: Java Interface Segregation Library">
-									<img src="img/jisel.png" width="350" height="205"/>
-								</a>
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
+    .container { width: min(1200px, 92%); margin: 0 auto; }
+    a { color: inherit; text-decoration: none; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem;
+      border-radius: 9999px; padding: .8rem 1.2rem; font-weight: 600;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #0c1020; box-shadow: var(--shadow);
+      transition: transform .15s ease, filter .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .btn.ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(6px);
+    }
 
-			<tr align="center" valign="top">
-				<td height="1px">
-					<table cellpadding="5">
-						<tr>
-							<td>
-								<iframe width="350" height="180" src="https://www.youtube.com/embed/2gXeLpg98VE" title="Celebrating 2 Decades of Java Annotations with JAPO" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</td>
-							<td>
-								<iframe width="350" height="180" src="https://www.youtube.com/embed/oiW8qLifdIQ" title="Froporec Java Library (April 2023 Presentation)" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</td>
-							<td>
-								<iframe width="350" height="180" src="https://www.youtube.com/embed/iML8EjMIDLc" title="Code Migration to Java 17 using FROPOREC and JISEL" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</td>
-						</tr>
-					</table>
-					<br/>
-				</td>
-			</tr>
+    /* Header */
+    .skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus { position: static; width: auto; height: auto; padding: .5rem 1rem; background: #fff; color: #111; border-radius: .5rem; }
 
-			<tr align="center">
-				<td height="1px">
-					<br/><br/><br/>
-					RECOGNITION:
-					<br/><br/>
-				</td>
-			</tr>
+    header {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: linear-gradient(to bottom, rgba(10,14,30,.75), rgba(10,14,30,.35));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: .9rem 0; }
+    .brand { font-weight: 800; letter-spacing: .22rem; }
+    .brand .dot { color: var(--brand-2); }
+    nav ul { list-style: none; display:flex; gap: 1.2rem; margin:0; padding:0; }
+    nav a { opacity:.9; font-weight:600; }
+    nav a:hover { opacity:1; }
+    .theme-toggle { background: transparent; border: 1px solid rgba(255,255,255,.2); color: var(--text); border-radius: 999px; padding: .5rem .8rem; cursor: pointer; }
 
-			<tr align="center">
-				<td height="1px">
-					<a class="sitetitle" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=3B45CE5BE265713B77257AEEFF4A7EFEDEB32024D0EF0159F85CA1FCC63AB9A4" target="_blank" title="Oracle Certified Professional: Java SE 17 Developer" alt="Oracle Certified Professional: Java SE 17 Developer">
-						<img src="img/OCPJSE17.jpg" width="260" height="130"/>
-					</a>
-					&nbsp;
-					<a class="sitetitle" href="https://www.credly.com/badges/0a03391c-b033-414e-b678-45f808ace0d1" target="_blank" title="AWS Certified Cloud Practitioner" alt="AWS Certified Cloud Practitioner">
-						<img src="img/aws.png" width="130" height="130"/>
-					</a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="sitetitle" href="https://www.credly.com/badges/b2c76b08-9eba-4c16-ad78-ec66209f8f16" target="_blank" title="VMware Spring Professional 2020" alt="VMware Spring Professional 2020">
-						<img src="img/595168-pivotal-bdg-prof-vmw-spring-color.png" width="130" height="107"/>
-					</a>
-					&nbsp;
-					<a class="sitetitle" href="https://www.credly.com/badges/46bbd807-c6ef-4db6-a1ad-50e54d136f2e" target="_blank" title="Oracle Certified Professional: Java SE 11 Developer" alt="Oracle Certified Professional: Java SE 11 Developer">
-						<img src="img/OCPJSE11.jpg" width="260" height="130"/>
-					</a>
-				</td>
-			</tr>
+    /* Hero */
+    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding: 4.5rem 0; }
+    .hero h1 { font-size: clamp(2rem, 3.4vw, 3rem); line-height:1.15; margin: 0 0 1rem; }
+    .hero p  { font-size: clamp(1rem, 1.2vw, 1.1rem); color: var(--muted); margin: 0 0 1.5rem; }
+    .hero-cta { display:flex; gap: .9rem; flex-wrap:wrap; }
+    .hero-card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding:1rem 1.2rem; }
+    .badges { display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; }
+    .badges img { height: 40px; width: auto; border-radius: 8px; object-fit: contain; background: #fff; }
 
-			<tr align="center">
-				<td height="1px">
-					<br/><br/><br/>
-					CONTACT:
-					<br/><br/>
-				</td>
-			</tr>
+    /* Sections */
+    section { padding: 3.8rem 0; }
+    .section-title { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin: 0 0 1.2rem; letter-spacing:.02em; }
+    .section-sub { color: var(--muted); margin: 0 0 2rem; }
 
-			<tr align="center">
-				<td height="1px">
-					<a class="sitetitle" href="https://www.linkedin.com/in/mohamed-ashraf-bayor/" target="_blank" title="https://www.linkedin.com/in/mohamed-ashraf-bayor/" alt="https://www.linkedin.com/in/mohamed-ashraf-bayor/">
-						<img src="img/linkedin.png" width="39" height="39"/>
-					</a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="sitetitle" href="https://github.com/mohamed-ashraf-bayor/" target="_blank" title="https://github.com/mohamed-ashraf-bayor/" alt="https://github.com/mohamed-ashraf-bayor/">
-						<img src="img/github-logo.png" width="42" height="42"/>
-					</a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="sitetitle" href="https://www.youtube.com/channel/UCLhc2NBAbsw-WDJBlsxFCEg/" target="_blank" title="https://www.youtube.com/channel/UCLhc2NBAbsw-WDJBlsxFCEg" alt="https://www.youtube.com/channel/UCLhc2NBAbsw-WDJBlsxFCEg/">
-						<img src="img/youtube-icon-logo.png" width="52" height="39"/>
-					</a>
-				</td>
-			</tr>
+    /* Cards grid */
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; }
+    .card { grid-column: span 4; background: var(--card); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 52px rgba(8,12,26,.45); }
+    .card img { width: 100%; height: 160px; object-fit: cover; display:block; }
+    .card-body { padding: 1rem 1rem 1.1rem; }
+    .card h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .card .meta { margin-top:.75rem; display:flex; gap:.75rem; flex-wrap:wrap; }
+    .chip { font: inherit; font-size:.8rem; padding:.25rem .55rem; border-radius:999px; border:1px solid rgba(255,255,255,.18); color: var(--muted); }
 
-			<tr align="center">
-				<td height="1px">
-					<br/><br/>
-					<hr/>
-				</td>
-			</tr>
-			
-			<tr align="center">
-				<td height="1px">
-					<span class="footerText">&copy;&nbsp;2023&nbsp;Mohamed&nbsp;Bayor,&nbsp;All&nbsp;rights&nbsp;reserved.</span>
-					<br/><br/><br/>
-				</td>
-			</tr>
+    /* Media embeds */
+    .video-grid .card img { display:none; }
+    .embed { aspect-ratio: 16/9; width: 100%; border:0; }
 
-		</table>
-		
-	</body>
-	
+    /* Contact */
+    .contact { display:flex; align-items:center; gap: 1rem; flex-wrap: wrap; }
+    .social { display:flex; gap: .9rem; }
+    .social a { display:inline-flex; width: 44px; height: 44px; align-items:center; justify-content:center; border-radius: 50%; border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04); transition: transform .15s ease; }
+    .social a:hover { transform: translateY(-3px); }
+    .social svg { width: 22px; height: 22px; }
+
+    footer { padding: 2rem 0 3rem; color: var(--muted); text-align:center; border-top: 1px solid rgba(255,255,255,.08); margin-top: 3rem; }
+
+    /* Responsiveness */
+    @media (max-width: 1100px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .card { grid-column: span 6; }
+    }
+    @media (max-width: 600px) {
+      .card { grid-column: span 12; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand" aria-label="Site title">MOHAMED&nbsp;BAYOR<span class="dot">.</span></div>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle theme">🌗</button>
+    </div>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero" aria-label="Introduction">
+      <div>
+        <h1>Java Developer & <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Software Architect</span></h1>
+        <p>
+          I design performant, cloud‑native systems and developer tools. Creator of
+          <strong>JAPO</strong> (Java Annotations Repo), <strong>FROPOREC</strong> (POJOs ➝ Records), and <strong>JISEL</strong>
+          (Interface Segregation Library). Passionate about migrations, modernization, and applying AI where it matters.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+        </div>
+        <div class="hero-card" style="margin-top:1.2rem">
+          <div class="badges" aria-label="Top certifications">
+            <img src="img/OCPJSE17.jpg" alt="Oracle Certified Professional: Java SE 17 Developer badge" loading="lazy" decoding="async" />
+            <img src="img/OCPJSE11.jpg" alt="Oracle Certified Professional: Java SE 11 Developer badge" loading="lazy" decoding="async" />
+            <img src="img/aws.png" alt="AWS Certified Cloud Practitioner badge" loading="lazy" decoding="async" />
+            <img src="img/595168-pivotal-bdg-prof-vmw-spring-color.png" alt="VMware Spring Professional 2020 badge" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true">
+        <img src="img/portfolio-pg-scrnsht.png" alt="Portfolio preview" style="width:100%; height:auto; border-radius:var(--radius); border:1px solid rgba(255,255,255,.1); box-shadow:var(--shadow)" loading="lazy" decoding="async" />
+      </div>
+    </section>
+
+    <!-- Projects / Featured Work -->
+    <section id="projects" aria-label="Featured projects">
+      <h2 class="section-title">Featured Work</h2>
+      <p class="section-sub">Selected projects I actively build and maintain.</p>
+
+      <div class="grid">
+        <!-- JAPO -->
+        <a class="card" href="https://japo.dev" target="_blank" rel="noopener" aria-label="Open JAPO website">
+          <img src="img/japo.png" alt="JAPO: Java Annotations Repo" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>JAPO — Java Annotations Repo</h3>
+            <p>Search engine & knowledge base for Java annotations with AI‑assisted discovery.</p>
+            <div class="meta">
+              <span class="chip">Java 21</span>
+              <span class="chip">Helidon 4</span>
+              <span class="chip">AWS OpenSearch</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- FROPOREC -->
+        <a class="card" href="https://froporec.org" target="_blank" rel="noopener" aria-label="Open FROPOREC website">
+          <img src="img/froporec.png" alt="FROPOREC: From POJOs to Records" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>FROPOREC — From POJOs to Records</h3>
+            <p>Annotation processor to generate Java Records from POJOs. Simplify migrations to modern Java.</p>
+            <div class="meta">
+              <span class="chip">Annotation Processing</span>
+              <span class="chip">Records</span>
+              <span class="chip">Open Source</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- JISEL -->
+        <a class="card" href="https://jisel.org" target="_blank" rel="noopener" aria-label="Open JISEL website">
+          <img src="img/jisel.png" alt="JISEL: Java Interface Segregation Library" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>JISEL — Interface Segregation Library</h3>
+            <p>Generate narrow, purpose‑built interfaces to keep APIs clean and maintainable.</p>
+            <div class="meta">
+              <span class="chip">SOLID</span>
+              <span class="chip">Codegen</span>
+              <span class="chip">Maven/Gradle</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Talks / Demos -->
+    <section id="talks" aria-label="Talks and demos">
+      <h2 class="section-title">Talks & Demos</h2>
+      <p class="section-sub">Conference sessions and presentations on my projects.</p>
+
+      <div class="grid video-grid">
+        <div class="card" style="grid-column: span 4;">
+          <iframe class="embed" loading="lazy"
+                  src="https://www.youtube.com/embed/2gXeLpg98VE"
+                  title="Celebrating 2 Decades of Java Annotations with JAPO"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <iframe class="embed" loading="lazy"
+                  src="https://www.youtube.com/embed/oiW8qLifdIQ"
+                  title="FROPOREC Java Library (April 2023 Presentation)"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="card" style="grid-column: span 4;">
+          <iframe class="embed" loading="lazy"
+                  src="https://www.youtube.com/embed/iML8EjMIDLc"
+                  title="Code Migration to Java 17 using FROPOREC and JISEL"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs" aria-label="Professional certifications">
+      <h2 class="section-title">Recognition</h2>
+      <p class="section-sub">Some credentials I’m proud of.</p>
+
+      <div class="grid" role="list">
+        <a class="card" role="listitem" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=3B45CE5BE265713B77257AEEFF4A7EFEDEB32024D0EF0159F85CA1FCC63AB9A4" target="_blank" rel="noopener" aria-label="Oracle Certified Professional: Java SE 17 Developer">
+          <img src="img/OCPJSE17.jpg" alt="OCP Java SE 17 badge" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Oracle Certified Professional — Java SE 17</h3>
+            <p>Advanced modern Java fluency and best practices.</p>
+          </div>
+        </a>
+
+        <a class="card" role="listitem" href="https://www.credly.com/badges/46bbd807-c6ef-4db6-a1ad-50e54d136f2e" target="_blank" rel="noopener" aria-label="Oracle Certified Professional: Java SE 11 Developer">
+          <img src="img/OCPJSE11.jpg" alt="OCP Java SE 11 badge" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Oracle Certified Professional — Java SE 11</h3>
+            <p>Core Java foundations and robust API design.</p>
+          </div>
+        </a>
+
+        <a class="card" role="listitem" href="https://www.credly.com/badges/0a03391c-b033-414e-b678-45f808ace0d1" target="_blank" rel="noopener" aria-label="AWS Certified Cloud Practitioner">
+          <img src="img/aws.png" alt="AWS Cloud Practitioner badge" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p>Cloud fundamentals across compute, storage, and networking.</p>
+          </div>
+        </a>
+
+        <a class="card" role="listitem" href="https://www.credly.com/badges/b2c76b08-9eba-4c16-ad78-ec66209f8f16" target="_blank" rel="noopener" aria-label="VMware Spring Professional 2020">
+          <img src="img/595168-pivotal-bdg-prof-vmw-spring-color.png" alt="VMware Spring Professional badge" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>VMware Spring Professional</h3>
+            <p>Production‑grade Spring and ecosystem proficiency.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-label="Contact">
+      <h2 class="section-title">Let’s build something useful.</h2>
+      <p class="section-sub">Open to architecture reviews, modernization projects, and developer tooling engagements.</p>
+
+      <div class="contact">
+        <div class="social" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/mohamed-ashraf-bayor/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.1c0-1.7 0-3.8-2.3-3.8s-2.6 1.8-2.6 3.7V24h-4V8z"/></svg>
+          </a>
+          <a href="https://github.com/mohamed-ashraf-bayor/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.85 3.15 8.97 7.5 10.42.55.1.75-.24.75-.53v-1.86c-3.05.66-3.7-1.3-3.7-1.3-.5-1.25-1.2-1.58-1.2-1.58-.98-.66.08-.65.08-.65 1.08.07 1.65 1.1 1.65 1.1.96 1.64 2.52 1.16 3.14.88.1-.7.38-1.17.68-1.44-2.44-.28-5-1.22-5-5.42 0-1.2.43-2.17 1.1-2.94-.1-.27-.47-1.38.1-2.88 0 0 .92-.3 3.02 1.12a10.3 10.3 0 0 1 5.5 0c2.1-1.42 3.02-1.12 3.02-1.12.57 1.5.2 2.61.1 2.88.68.77 1.1 1.74 1.1 2.94 0 4.21-2.56 5.14-5 5.42.39.34.73 1 .73 2.03v3c0 .29.2.63.76.53A10.99 10.99 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCLhc2NBAbsw-WDJBlsxFCEg/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.6-.93-2.3c-.89-.93-1.89-.93-2.35-.98C16.97 2.5 12 2.5 12 2.5h-.01s-4.97 0-8.22.42c-.46.05-1.46.05-2.35.98C.73 4.6.5 6.2.5 6.2S.27 8.1.27 10v1.9c0 1.9.23 3.8.23 3.8s.23 1.6.93 2.3c.89.93 2.06.9 2.58 1 1.87.18 7.99.41 7.99.41s4.98-.01 8.23-.43c.46-.05 1.46-.05 2.35-.98.7-.7.93-2.3.93-2.3s.23-1.9.23-3.8V10c0-1.9-.23-3.8-.23-3.8zM9.75 13.9V7.9l6.25 3-6.25 3z"/></svg>
+          </a>
+        </div>
+        <a class="btn" href="mailto:mohamed_bayor@epam.com">Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Mohamed Bayor. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Schema.org (JSON‑LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohamed Ashraf Bayor",
+    "url": "https://mohamedbayor.dev/",
+    "image": "https://mohamedbayor.dev/img/linkdIn-prfl-pic.jpg",
+    "jobTitle": "Java Developer & Software Architect",
+    "worksFor": {"@type":"Organization", "name":"JAPO Dev Solutions"},
+    "sameAs": [
+      "https://www.linkedin.com/in/mohamed-ashraf-bayor/",
+      "https://github.com/mohamed-ashraf-bayor/",
+      "https://www.youtube.com/channel/UCLhc2NBAbsw-WDJBlsxFCEg/"
+    ],
+    "knowsAbout": ["Java 17","Java 21","Helidon","AWS","OpenSearch","Spring","Software Architecture","AI"]
+  }
+  </script>
+
+  <!-- Small helpers -->
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle with preference persistence
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+      toggle.setAttribute('aria-pressed', saved === 'dark');
+    }
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggle.setAttribute('aria-pressed', next === 'dark');
+    });
+  </script>
+</body>
 </html>
-
