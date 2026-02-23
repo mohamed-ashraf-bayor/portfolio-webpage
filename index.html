@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohamed Bayor — Java Developer & Software Architect</title>
-  <meta name="description" content="Portfolio of Mohamed Ashraf Bayor — Java developer & software architect. Featured projects: JAPO (Java Annotations Repo), FROPOREC, and JISEL. Talks, certifications, and contact links." />
+  <meta name="description" content="Portfolio of Mohamed Ashraf Bayor — Java developer & software architect. Featured projects: HALIBOTS and JAPO. Talks, certifications, and contact links." />
   <meta name="author" content="Mohamed Ashraf Bayor" />
   <link rel="canonical" href="https://mohamedbayor.dev/" />
   <link rel="icon" href="img/linkdIn-prfl-pic.jpg" />
@@ -14,7 +14,7 @@
   <!-- Social (OG/Twitter) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mohamed Bayor — Java Developer & Software Architect" />
-  <meta property="og:description" content="Featured projects: JAPO, FROPOREC, JISEL. Talks, certifications, and contact links." />
+  <meta property="og:description" content="Featured projects: HALIBOTS and JAPO. Talks, certifications, and contact links." />
   <meta property="og:url" content="https://mohamedbayor.dev/" />
   <meta property="og:image" content="https://mohamedbayor.dev/img/portfolio-pg-scrnsht.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -133,6 +133,35 @@
     .card .meta { margin-top:.75rem; display:flex; gap:.75rem; flex-wrap:wrap; }
     .chip { font: inherit; font-size:.8rem; padding:.25rem .55rem; border-radius:999px; border:1px solid rgba(255,255,255,.18); color: var(--muted); }
 
+
+    /* Featured Work refresh */
+    .projects-grid { align-items: stretch; }
+    .featured-hero { grid-column: span 7; position: relative; }
+    .featured-hero::before {
+      content: ""; position:absolute; inset:0;
+      background: radial-gradient(500px 240px at 15% 10%, rgba(34,211,238,.12), transparent 60%),
+                  radial-gradient(600px 260px at 85% 90%, rgba(139,92,246,.12), transparent 60%);
+      pointer-events:none;
+    }
+    .featured-hero .card-body { position:relative; padding: 1.2rem 1.2rem 1.3rem; }
+    .featured-hero img { height: 220px; object-fit: cover; object-position: center; }
+    .featured-hero h3 { font-size: 1.15rem; }
+    .featured-hero p { font-size: .96rem; }
+    .featured-hero .project-link {
+      display:inline-flex; align-items:center; gap:.45rem; margin-top:.8rem; font-weight:600;
+      color: var(--brand-2);
+    }
+    .featured-side { grid-column: span 5; display:flex; }
+    .featured-side .card { grid-column: auto; width:100%; display:flex; flex-direction:column; }
+    .featured-side img { height: 180px; }
+    .featured-side .card-body { display:flex; flex-direction:column; gap:.15rem; height:100%; }
+    .featured-side .meta { margin-top:auto; }
+    .kicker {
+      display:inline-flex; align-items:center; gap:.45rem; margin-bottom:.45rem;
+      font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color: var(--brand-2);
+    }
+    .kicker::before { content:""; width:8px; height:8px; border-radius:50%; background: currentColor; opacity:.9; }
+
     /* Media embeds */
     .video-grid .card img { display:none; }
     .embed { aspect-ratio: 16/9; width: 100%; border:0; }
@@ -152,9 +181,12 @@
     }
     @media (max-width: 900px) {
       .card { grid-column: span 6; }
+      .featured-hero, .featured-side { grid-column: span 12; }
+      .featured-hero img { height: 200px; }
     }
     @media (max-width: 600px) {
       .card { grid-column: span 12; }
+      .featured-hero img, .featured-side img { height: 170px; }
       nav ul { display: none; }
     }
     /* Full-bleed utility to break out of a centered container */
@@ -222,50 +254,43 @@
     <!-- Projects / Featured Work -->
     <section id="projects" aria-label="Featured projects">
       <h2 class="section-title">Featured Work</h2>
-      <p class="section-sub">Selected projects I actively build and maintain.</p>
+      <p class="section-sub">Selected projects I actively build and maintain — with a stronger focus on current AI + robotics work.</p>
 
-      <div class="grid">
-        <!-- JAPO -->
-        <a class="card" href="https://japo.dev" target="_blank" rel="noopener" aria-label="Open JAPO website">
-          <img src="img/japo.png" alt="JAPO: Java Annotations Repo" loading="lazy" decoding="async" />
+      <div class="grid projects-grid">
+        <!-- HALIBOTS (Primary) -->
+        <a class="card featured-hero" href="https://halibots.dev" target="_blank" rel="noopener" aria-label="Open HALIBOTS website">
+          <img src="img/halibots.png" alt="HALIBOTS robotics and AI learning platform" loading="lazy" decoding="async" onerror="this.src='img/portfolio-pg-scrnsht.png'" />
           <div class="card-body">
-            <h3>JAPO — Java Annotations Repo</h3>
-            <p>Search engine & knowledge base for Java annotations with AI‑assisted discovery.</p>
+            <div class="kicker">Primary Project</div>
+            <h3>HALIBOTS — Hub for Applied Learning in Robotics</h3>
+            <p>Cloud-based robotics learning platform for remote coding challenges, real-robot interaction, and AI-assisted feedback, built for hands-on education and scalable challenge delivery.</p>
             <div class="meta">
-              <span class="chip">Java 21</span>
-              <span class="chip">Helidon 4</span>
-              <span class="chip">AWS OpenSearch</span>
+              <span class="chip">AWS Lambda</span>
+              <span class="chip">API Gateway</span>
+              <span class="chip">S3 + SQS</span>
+              <span class="chip">DynamoDB</span>
+              <span class="chip">AI Feedback</span>
             </div>
+            <span class="project-link">Visit project ↗</span>
           </div>
         </a>
 
-        <!-- FROPOREC -->
-        <a class="card" href="https://froporec.org" target="_blank" rel="noopener" aria-label="Open FROPOREC website">
-          <img src="img/froporec.png" alt="FROPOREC: From POJOs to Records" loading="lazy" decoding="async" />
-          <div class="card-body">
-            <h3>FROPOREC — From POJOs to Records</h3>
-            <p>Annotation processor to generate Java Records from POJOs. Simplify migrations to modern Java.</p>
-            <div class="meta">
-              <span class="chip">Annotation Processing</span>
-              <span class="chip">Records</span>
-              <span class="chip">Open Source</span>
+        <!-- JAPO (Secondary) -->
+        <div class="featured-side">
+          <a class="card" href="https://japo.dev" target="_blank" rel="noopener" aria-label="Open JAPO website">
+            <img src="img/japo.png" alt="JAPO: Java Annotations Repo" loading="lazy" decoding="async" />
+            <div class="card-body">
+              <div class="kicker">Production Tooling</div>
+              <h3>JAPO — Java Annotations Repo</h3>
+              <p>Search engine and knowledge base for Java annotations with AI-assisted discovery and developer-focused API tooling.</p>
+              <div class="meta">
+                <span class="chip">Java 21</span>
+                <span class="chip">Helidon 4</span>
+                <span class="chip">AWS OpenSearch</span>
+              </div>
             </div>
-          </div>
-        </a>
-
-        <!-- JISEL -->
-        <a class="card" href="https://jisel.org" target="_blank" rel="noopener" aria-label="Open JISEL website">
-          <img src="img/jisel.png" alt="JISEL: Java Interface Segregation Library" loading="lazy" decoding="async" />
-          <div class="card-body">
-            <h3>JISEL — Interface Segregation Library</h3>
-            <p>Generate narrow, purpose‑built interfaces to keep APIs clean and maintainable.</p>
-            <div class="meta">
-              <span class="chip">SOLID</span>
-              <span class="chip">Codegen</span>
-              <span class="chip">Maven/Gradle</span>
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </section>
 
